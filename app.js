@@ -233,7 +233,7 @@ const scrollToHashTarget = (hash, behavior = "auto") => {
 const handleHistoryNavigation = () => {
   const isProjectHash = window.location.hash.startsWith("#project-");
   syncProjectFromHash();
-  if (!isProjectHash && projectPage.hidden) scrollToHashTarget(window.location.hash);
+  if (!isProjectHash && projectPage.hidden && window.location.hash) scrollToHashTarget(window.location.hash);
 };
 
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
