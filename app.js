@@ -2,12 +2,26 @@ const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matc
 const releaseLoadingState = () => {
   document.body.classList.remove('is-loading');
   document.documentElement.classList.remove('is-loading');
+  window.removeEventListener('wheel', preventLoadingScroll);
+  window.removeEventListener('touchmove', preventLoadingScroll);
+  window.removeEventListener('keydown', preventLoadingKeyScroll);
 };
 const shouldShowLoader = !reducedMotion && window.gsap;
 if (shouldShowLoader) {
   document.body.classList.add('is-loading');
   document.documentElement.classList.add('is-loading');
 }
+
+const loadingScrollKeys = new Set([' ', 'PageUp', 'PageDown', 'End', 'Home', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight']);
+const preventLoadingScroll = (event) => {
+  if (document.documentElement.classList.contains('is-loading')) event.preventDefault();
+};
+const preventLoadingKeyScroll = (event) => {
+  if (document.documentElement.classList.contains('is-loading') && loadingScrollKeys.has(event.key)) event.preventDefault();
+};
+window.addEventListener('wheel', preventLoadingScroll, { passive:false });
+window.addEventListener('touchmove', preventLoadingScroll, { passive:false });
+window.addEventListener('keydown', preventLoadingKeyScroll);
 
 if (shouldShowLoader) {
   const counter = document.querySelector('.loader-count');
