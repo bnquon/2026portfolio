@@ -47,8 +47,7 @@ if (shouldShowLoader) {
   loaderTimeline
     .to('.loader-name span:first-child', { yPercent: -105, duration: loaderDuration(.75), ease: 'power3.inOut' }, `+=${loaderDuration(.08)}`)
     .to('.loader-name span:last-child', { yPercent: 105, duration: loaderDuration(.75), ease: 'power3.inOut' }, '<')
-    .to('.loader', { yPercent: -100, duration: loaderDuration(.85), ease: 'power3.inOut' }, `-=${loaderDuration(.35)}`)
-    .to({}, { duration: loaderDuration(.8) });
+    .to('.loader', { yPercent: -100, duration: loaderDuration(.85), ease: 'power3.inOut' }, `-=${loaderDuration(.35)}`);
 } else {
   document.querySelector('.loader')?.remove();
   releaseLoadingState();
