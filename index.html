@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Brandon Quon is a Vancouver-based developer and computer science student building useful software." />
+    <title>Brandon Quon</title>
+    <link rel="icon" href="favicon.ico" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.brandon-quon.com/" />
+    <meta property="og:title" content="Brandon Quon — Software Developer" />
+    <meta property="og:description" content="A Vancouver-based developer building useful software." />
+    <meta property="og:image" content="https://www.brandon-quon.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Brandon Quon — Software Developer" />
+    <meta name="twitter:description" content="A Vancouver-based developer building useful software." />
+    <meta name="twitter:image" content="https://www.brandon-quon.com/og-image.png" />
+    <link rel="preconnect" href="https://api.fontshare.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600&display=swap" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" />
+    </noscript>
+    <script>
+      try {
+        const loaderSavedTheme = localStorage.getItem('portfolio-theme');
+        const loaderSystemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = loaderSavedTheme || loaderSystemTheme;
+      } catch {}
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="loader" aria-live="polite" aria-label="Loading Brandon Quon's portfolio">
+      <div class="loader-name"><span>Brandon</span><span>Quon</span></div>
+    <div class="loader-line"><i></i></div>
+      <span class="loader-count">00</span>
+    </div>
+
+    <header class="site-header">
+      <a class="mark" href="#top" aria-label="Back to top">BQ</a>
+      <nav aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#experience">Experiences</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" type="button" aria-label="Switch color theme"><i></i><span>Dark</span></button>
+      </nav>
+    </header>
+
+    <aside class="section-rail" aria-label="Page sections">
+      <a href="#intro" aria-label="Introduction"><i></i><span>Introduction</span></a>
+      <a href="#about" aria-label="About"><i></i><span>About</span></a>
+      <a href="#experience" aria-label="Experiences"><i></i><span>Experiences</span></a>
+      <a href="#work" aria-label="Things I've built"><i></i><span>Things I've built</span></a>
+      <a href="#contact" aria-label="Contact"><i></i><span>Contact</span></a>
+    </aside>
+
+    <main id="top">
+      <section class="hero" id="intro" data-section="Introduction">
+        <figure class="hero-art"><img id="hero-image" src="assets/campus-banner.webp" data-light-src="assets/campus-banner-daytime.webp" data-dark-src="assets/campus-banner.webp" width="1983" height="793" fetchpriority="high" alt="Pixel art coastal campus workshop" /></figure>
+        <div class="music-player" id="music-player" aria-label="Portfolio soundtrack">
+          <audio id="music-audio" preload="metadata" hidden></audio>
+          <div class="music-player-main">
+            <button class="music-player-play" type="button" aria-label="Play track">▶</button>
+            <span class="music-player-title">Whirling-in-Rags, 8 AM</span>
+            <span class="music-player-time">0:00</span>
+            <input class="music-player-progress" id="music-seek" type="range" min="0" max="0" step="0.1" value="0" disabled aria-label="Seek through track" />
+            <span class="music-player-time music-player-duration">--:--</span>
+            <label class="music-player-volume"><span>Vol</span><input id="music-volume" type="range" min="0" max="1" step="0.01" value="0.25" aria-label="Volume" /></label>
+          </div>
+          <span class="music-player-note">- A quiet thought from Martinaise</span>
+        </div>
+        <div class="identity-panel">
+          <div class="identity-copy"><h1>Brandon Quon</h1></div>
+          <div class="identity-meta"><span>Vancouver-based CS student</span><span class="identity-availability"><i aria-hidden="true"></i>Open to opportunities</span></div>
+        </div>
+      </section>
+
+      <section class="about" id="about" data-section="About">
+        <h2>About me</h2>
+        <p>I originally accepted an offer to study kinesiology. One day, I randomly remembered how much fun I had taking computer science in Grade 11.<br /><br />I switched majors, and now I like building products that are useful, clear, and easy to pick up. Lately, I’ve been learning more about AI and figuring out where it can actually be useful.</p>
+      </section>
+
+      <section class="experience" id="experience" data-section="Experiences">
+        <header class="section-heading"><h2>Experiences</h2></header>
+        <div class="experience-panel experience-panel--ledger">
+          <div class="ledger-list">
+            <div class="ledger-row ledger-row--head" aria-hidden="true"><span>Period</span><span>Role / company / detail</span></div>
+            <div class="ledger-row"><time>05/2025-12/2025</time><div><h3>Software Engineer Co-op</h3><span>Trulioo / Developed for 20+ micro-frontends and services</span></div></div>
+            <div class="ledger-row"><time>09/2024-04/2025</time><div><h3>Software Developer Co-op</h3><span>Formations / Features for 1,100+ business owners</span></div></div>
+            <div class="ledger-row ledger-row--initiative"><time>2025-26</time><div><h3>Mobile Development Lead</h3><span>Enactus SFU - Unify / 280+ iOS Downloads / $8,000 funding</span></div></div>
+            <div class="ledger-row ledger-row--initiative"><time>2024-25</time><div><h3>Technical Team Lead</h3><span>SFU Blueprint / volunteer app for 350+ people</span></div></div>
+          </div>
+          <div class="ledger-resume-wrap">
+            <a class="ledger-resume" href="assets/Brandon_Quon_Resume.pdf">Read the full résumé <span>↗</span></a>
+            <span class="ledger-resume-updated">Last updated · July 2026</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="work" id="work" data-section="Things I've built">
+        <header class="section-heading"><h2>Things I've built</h2></header>
+        <div class="project-list">
+          <a class="project" href="#project-new" data-project="new" aria-label="Open VODCoach project details">
+            <span class="project-title"><span class="project-name">VODCoach</span><span class="project-detail">Full-stack VOD review workspace</span></span><span class="project-role">Go, React.js, TypeScript, Redpanda</span><span class="project-year">2026</span>
+            <span class="project-open" aria-hidden="true">↗</span>
+            <span class="project-preview project-preview--vodcoach"><img src="assets/vodcoach-preview.png" width="960" height="638" loading="lazy" decoding="async" alt="VODCoach Studio project preview" /></span>
+          </a>
+          <a class="project" href="#project-intervu" data-project="intervu" aria-label="Open IntervU project details">
+            <span class="project-title"><span class="project-name">IntervU</span><span class="project-detail">Top 3 / 220 hackathon project</span></span><span class="project-role">Go, Gemini</span><span class="project-year">2025</span>
+            <span class="project-open" aria-hidden="true">↗</span>
+            <span class="project-preview"><img src="assets/intervu-preview.webp" width="1920" height="1025" loading="lazy" decoding="async" alt="IntervU mock interview interface preview" /></span>
+          </a>
+          <a class="project" href="#project-jobscura" data-project="jobscura" aria-label="Open Jobscura project details">
+            <span class="project-title"><span class="project-name">Jobscura</span><span class="project-detail">450+ installs</span></span><span class="project-role">Chrome extension</span><span class="project-year">2025</span>
+            <span class="project-open" aria-hidden="true">↗</span>
+            <span class="project-preview"><img src="assets/jobscura-preview.png" width="720" height="371" loading="lazy" decoding="async" alt="Jobscura Chrome extension preview" /></span>
+          </a>
+        </div>
+      </section>
+
+      <section class="project-page" id="project-page" aria-labelledby="project-page-title" tabindex="-1" hidden>
+        <header class="project-page-header">
+          <a class="project-back" href="#work" data-project-close>← Back to things I've built</a>
+          <div class="project-page-nav">
+            <span id="project-page-count">01 / 03</span>
+            <a class="project-next" id="project-page-next" href="#project-intervu" data-project="intervu">Next / IntervU ↗</a>
+          </div>
+        </header>
+        <div class="project-page-intro">
+          <div class="project-page-copy">
+            <p class="project-page-kicker" id="project-page-kicker">Things I've built / 01</p>
+            <h1 id="project-page-title">New project</h1>
+            <p class="project-page-summary" id="project-page-summary">A new project is taking shape here.</p>
+            <dl class="project-page-meta">
+              <div><dt>Stack</dt><dd id="project-page-stack">In progress</dd></div>
+            </dl>
+          </div>
+          <div class="project-media-window project-media-window--video" id="project-page-media" aria-label="VODCoach Studio walkthrough video">
+            <div class="mockup-toolbar"><i></i><i></i><i></i><span>vodcoach-demo.mp4</span></div>
+            <video class="project-video" id="project-page-video" controls playsinline preload="metadata" poster="assets/vodcoach-preview.png">
+              <source src="assets/VodCoachDemo.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        <div class="project-page-lower">
+          <article class="project-page-description">
+            <p class="project-page-label">A closer look</p>
+            <p id="project-page-description">This space is reserved for the next build, once it is ready to show.</p>
+          </article>
+          <div class="project-page-meta-row">
+            <div class="project-page-year"><span>Year</span><strong id="project-page-year">2026</strong></div>
+            <aside class="project-page-links">
+              <p class="project-page-label" id="project-page-links-label">Links</p>
+              <div class="project-page-link-list">
+                <a id="project-page-link" href="#work" target="_blank" rel="noreferrer" hidden>Details soon ↗</a>
+                <a id="project-page-github" href="#work" target="_blank" rel="noreferrer" hidden>GitHub ↗</a>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <footer class="contact" id="contact" data-section="Contact">
+        <div><p>Want to build something useful together?</p><a class="contact-link" href="mailto:bnquon@gmail.com">bnquon@gmail.com</a></div>
+        <div class="footer-meta"><a href="https://www.linkedin.com/in/brandon-quon/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/bnquon" target="_blank" rel="noopener noreferrer">GitHub ↗</a><span>© 2026 Brandon Quon</span></div>
+      </footer>
+    </main>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script defer src="app.js"></script>
+  </body>
+</html>
