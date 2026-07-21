@@ -34,6 +34,10 @@
         document.documentElement.dataset.theme = loaderSavedTheme || loaderSystemTheme;
       } catch {}
     </script>
+    <style>
+      html:not(.page-ready) body > :not(.loader) { visibility:hidden; }
+      .loader { visibility:visible; }
+    </style>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -174,6 +178,7 @@
       </footer>
     </main>
 
+    <script>document.documentElement.classList.add('page-ready');</script>
     <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script defer src="app.js"></script>
