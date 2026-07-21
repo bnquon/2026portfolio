@@ -214,6 +214,17 @@ const syncProjectFromHash = () => {
   else if (!projectPage.hidden) closeProject(false, false);
 };
 
+const scrollToHashTarget = (hash, behavior = "auto") => {
+  const target = document.querySelector(hash || "#top");
+  target?.scrollIntoView({ behavior });
+};
+
+const handleHistoryNavigation = () => {
+  const isProjectHash = window.location.hash.startsWith("#project-");
+  syncProjectFromHash();
+  if (!isProjectHash && projectPage.hidden) scrollToHashTarget(window.location.hash);
+};
+
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener('click', (event) => {
     if (link.dataset.project) {
@@ -226,20 +237,22 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
       closeProject(true);
       return;
     }
-    const target = document.querySelector(link.getAttribute('href'));
+    const hash = link.getAttribute('href');
+    const target = document.querySelector(hash);
     if (!target) return;
     event.preventDefault();
+    if (window.location.hash !== hash) history.pushState({}, '', hash);
     target.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth' });
   });
 });
 
-window.addEventListener('popstate', syncProjectFromHash);
-window.addEventListener('hashchange', syncProjectFromHash);
+window.addEventListener('popstate', handleHistoryNavigation);
+window.addEventListener('hashchange', handleHistoryNavigation);
 
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && !projectPage.hidden) closeProject(true);
 });
-syncProjectFromHash();
+handleHistoryNavigation();
 
 const sections = [...document.querySelectorAll('[data-section]')];
 const railLinks = [...document.querySelectorAll('.section-rail a')];
