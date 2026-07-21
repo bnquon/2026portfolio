@@ -192,7 +192,7 @@ const closeProject = (returnToWork = false, updateHistory = true) => {
   projectPage.classList.remove('is-swapping', 'is-swapping-in');
   projectPage.classList.remove('is-visible');
   document.body.classList.remove('is-project-open');
-  if (updateHistory) history.replaceState({}, '', '#work');
+  if (updateHistory) history.replaceState({}, '', `${window.location.pathname}${window.location.search}`);
   const finishClose = () => {
     projectPage.hidden = true;
     document.documentElement.classList.remove('is-project-open');
