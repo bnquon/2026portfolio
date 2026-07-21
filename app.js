@@ -2,7 +2,6 @@ const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matc
 const releaseLoadingState = () => {
   document.body.classList.remove('is-loading');
   document.documentElement.classList.remove('is-loading');
-  document.documentElement.classList.add('app-ready');
 };
 const shouldShowLoader = !reducedMotion && window.gsap;
 if (shouldShowLoader) {

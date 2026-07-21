@@ -34,13 +34,6 @@
         document.documentElement.dataset.theme = loaderSavedTheme || loaderSystemTheme;
       } catch {}
     </script>
-    <style>
-      html, body { background:#f2f1ed; }
-      body { visibility:hidden; }
-      .loader { visibility:visible; position:fixed; inset:0; z-index:100; background:#f2f1ed; }
-      html[data-theme="dark"], html[data-theme="dark"] body, html[data-theme="dark"] .loader { background:#11120f; color:#efeee8; }
-      html.app-ready body { visibility:visible; }
-    </style>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
