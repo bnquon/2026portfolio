@@ -2,11 +2,9 @@ const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matc
 const releaseLoadingState = () => {
   document.body.classList.remove('is-loading');
   document.documentElement.classList.remove('is-loading');
-  window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
 };
 const shouldShowLoader = !reducedMotion && window.gsap;
 if (shouldShowLoader) {
-  window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
   document.body.classList.add('is-loading');
   document.documentElement.classList.add('is-loading');
 }
