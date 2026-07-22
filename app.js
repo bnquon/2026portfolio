@@ -68,7 +68,7 @@ if (shouldShowLoader) {
 }
 
 const projectDetails = {
-  new: {
+  vodcoach: {
     kicker: "Things I've built / 01",
     count: '01 / 03',
     title: 'VODCoach',
@@ -122,7 +122,7 @@ const projectPageFields = {
 const projectNext = document.querySelector('#project-page-next');
 const projectMediaWindow = document.querySelector('#project-page-media');
 const projectLinksLabel = document.querySelector('#project-page-links-label');
-const projectOrder = ['new', 'intervu', 'jobscura'];
+const projectOrder = ['vodcoach', 'intervu', 'jobscura'];
 let projectCloseTimer;
 let projectSwapTimer;
 let lastProjectTrigger = null;
